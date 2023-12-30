@@ -2,24 +2,23 @@
 #include <iostream>
 #include <vector>
 #include "AudioFile.h"
+#include "TrackList.h"
 
-class Playlist {
+class Playlist : TrackList {
 private:
     std::string playlistName;
-    std::vector<AudioFile> list;
 public:
+    // конструкторы
     Playlist(const std::string& playlistName);
     Playlist(const std::string& playlistName, std::vector<AudioFile> list);
 
-    void output(bool isLong = true);
-    void add(const AudioFile& elem);
-    void remove(int index);
-
+    // геттеры 
     std::string& getPlaylistName();
-    int getListSize();
-    AudioFile& getElement(int index);
 
+    // сеттеры
     void setPlaylistName(const std::string& newPlaylistName);
 
-    Playlist operator+(const AudioFile& audio) const; // добавление трека в плейлист с помощью "+"
+    // методы
+    void display();
+    void displayShort();
 };
