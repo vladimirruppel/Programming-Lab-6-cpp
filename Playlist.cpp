@@ -10,11 +10,6 @@ Playlist::Playlist(const std::string& playlistName, std::vector<AudioFile> list)
 {
 }
 
-void Playlist::output(bool isLong)
-{
-    
-}
-
 std::string& Playlist::getPlaylistName()
 {
     return playlistName;
