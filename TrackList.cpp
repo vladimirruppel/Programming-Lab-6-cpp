@@ -41,7 +41,6 @@ void TrackList::removeTrackByIndex(int index)
 
 void TrackList::display()
 {
-	std::cout << "Треклист: " << std::endl;
 	for (AudioFile track : list) {
 		track.shortOutput();
 	}

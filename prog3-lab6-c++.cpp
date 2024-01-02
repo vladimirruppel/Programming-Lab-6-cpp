@@ -19,6 +19,9 @@ int main()
 
     TrackList* basePlaylist = new Playlist("Мой плейлист");
 
+    AudioFile af("file1.mp3", "FRIENDLY THUG 52 NGG", "Victor", 201, 2022);
+    basePlaylist->add(af);
+
     // Вызов виртуальной функции через не виртуальную функцию базового класса
     basePlaylist->display();
 
