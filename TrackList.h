@@ -15,13 +15,13 @@ public:
     void setTrackList(std::vector<AudioFile> list);
 
     // геттеры
-    std::vector<AudioFile> getTrackList();
+    std::vector<AudioFile> getTrackList() const;
     int getSize();
     AudioFile& getTrackByIndex(int index);
 
     // методы
     void add(const AudioFile& audioFile);
     void removeTrackByIndex(int index);
-    void display();
+    virtual void display();
     TrackList operator+(const AudioFile& audioFile) const;
 };

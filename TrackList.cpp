@@ -14,7 +14,7 @@ void TrackList::setTrackList(std::vector<AudioFile> list)
 	this->list = list;
 }
 
-std::vector<AudioFile> TrackList::getTrackList()
+std::vector<AudioFile> TrackList::getTrackList() const
 {
 	return list;
 }
@@ -41,6 +41,7 @@ void TrackList::removeTrackByIndex(int index)
 
 void TrackList::display()
 {
+	std::cout << "Треклист: " << std::endl;
 	for (AudioFile track : list) {
 		track.shortOutput();
 	}

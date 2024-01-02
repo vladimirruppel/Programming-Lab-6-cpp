@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Album.cpp" />
     <ClCompile Include="AudioCollection.cpp" />
     <ClCompile Include="AudioFile.cpp" />
     <ClCompile Include="AudioPlayer.cpp" />
@@ -134,14 +135,17 @@
     <ClCompile Include="MusicLibrary.cpp" />
     <ClCompile Include="Playlist.cpp" />
     <ClCompile Include="prog3-lab6-c++.cpp" />
+    <ClCompile Include="TrackList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Album.h" />
     <ClInclude Include="AudioCollection.h" />
     <ClInclude Include="AudioFile.h" />
     <ClInclude Include="AudioPlayer.h" />
     <ClInclude Include="AuditionsNumber.h" />
     <ClInclude Include="MusicLibrary.h" />
     <ClInclude Include="Playlist.h" />
+    <ClInclude Include="TrackList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

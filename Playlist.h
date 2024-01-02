@@ -4,7 +4,7 @@
 #include "AudioFile.h"
 #include "TrackList.h"
 
-class Playlist : TrackList {
+class Playlist : public TrackList {
 private:
     std::string playlistName;
 public:
@@ -21,4 +21,5 @@ public:
     // методы
     void display();
     void displayShort();
+    Playlist operator=(const TrackList& trackList) const;
 };

@@ -22,7 +22,7 @@ void Playlist::setPlaylistName(const std::string& newPlaylistName)
 
 void Playlist::display()
 {
-    std::cout << "Плейлист \"" << playlistName << "\"" << std::endl;
+    std::cout << "Плейлист \"" << playlistName << "\": " << std::endl;
     TrackList::display();
 }
 
@@ -30,4 +30,10 @@ void Playlist::displayShort()
 {
     std::cout << "Плейлист \"" << playlistName << "\", треков: "
         << getSize() << std::endl;
+}
+
+Playlist Playlist::operator=(const TrackList& trackList) const
+{
+    Playlist result(playlistName, trackList.getTrackList());
+    return result;
 }
