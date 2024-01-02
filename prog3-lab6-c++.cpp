@@ -17,20 +17,10 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    TrackList* basePlaylist = new Playlist("Мой плейлист");
+    Playlist playlist("Мой плейлист");
+    AudioFile audioFile("file1.mp3", "FRIENDLY THUG 52 NGG", "No Gletcher Gang", 203, 2023); 
+    playlist.add(audioFile);
 
-    AudioFile af("file1.mp3", "FRIENDLY THUG 52 NGG", "Victor", 201, 2022);
-    basePlaylist->add(af);
-
-    // Вызов виртуальной функции через не виртуальную функцию базового класса
-    basePlaylist->display();
-
-    // Вызов виртуальной функции через динамический объект производного класса
-    Playlist* derivedPlaylist = dynamic_cast<Playlist*>(basePlaylist);
-    if (derivedPlaylist) {
-        derivedPlaylist->display();
-    }
-
-    // Очистка памяти
-    delete basePlaylist;
+    TrackList* trackList = &playlist;
+    trackList->display();
 }

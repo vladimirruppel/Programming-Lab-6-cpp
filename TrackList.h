@@ -3,7 +3,7 @@
 #include "AudioFile.h"
 #include "DisplayItem.h"
 
-class TrackList : public DisplayItem
+class TrackList
 {
 protected:
     std::vector<AudioFile> list;
@@ -23,6 +23,6 @@ public:
     // методы
     void add(const AudioFile& audioFile);
     void removeTrackByIndex(int index);
-    virtual void display();
+    void display();
     TrackList operator+(const AudioFile& audioFile) const;
 };
