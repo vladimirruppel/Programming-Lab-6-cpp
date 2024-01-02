@@ -32,7 +32,7 @@ bool AudioPlayer::toggle()
 
 AudioFile& AudioPlayer::next()
 {
-    if (trackIndexInPlaylist + 1 < currPlaylist->getListSize())
+    if (trackIndexInPlaylist + 1 < currPlaylist->getSize())
         trackIndexInPlaylist++;
     return getCurrentTrack();
 }
@@ -52,7 +52,7 @@ void AudioPlayer::setPlaylist(Playlist* newPlaylist)
 
 AudioFile& AudioPlayer::getCurrentTrack()
 {
-    return currPlaylist->getElement(trackIndexInPlaylist);
+    return currPlaylist->getTrackByIndex(trackIndexInPlaylist);
 }
 
 bool AudioPlayer::getIsPlaylistAssignedStatus()

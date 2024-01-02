@@ -124,7 +124,7 @@ int MusicLibrary::printPlaylistArray()
         for (int i = 0; i < arraySize; i++) {
             Playlist& currPlaylist = playlistArray[i];
             std::cout << (i + 1) << ". " << currPlaylist.getPlaylistName()
-                << " - " << currPlaylist.getListSize() << " треков" << std::endl;
+                << " - " << currPlaylist.getSize() << " треков" << std::endl;
         }
     }
 
