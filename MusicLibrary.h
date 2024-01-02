@@ -1,7 +1,8 @@
 #pragma once
 #include "Playlist.h"
+#include "DisplayItem.h"
 
-class MusicLibrary {
+class MusicLibrary : public DisplayItem {
 private:
     std::vector<AudioFile> audioFileArray;
     std::vector<Playlist> playlistArray;
@@ -13,6 +14,7 @@ public:
 
     int printAudioFileArray();
     int printPlaylistArray();
+    void display();
 
     std::vector<AudioFile> getAudioFileArray();
     int getPlaylistArraySize();

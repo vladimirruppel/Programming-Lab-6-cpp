@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include "AudioFile.h"
+#include "DisplayItem.h"
 
-class TrackList
+class TrackList : public DisplayItem
 {
 protected:
     std::vector<AudioFile> list;

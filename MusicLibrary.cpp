@@ -131,6 +131,14 @@ int MusicLibrary::printPlaylistArray()
     return arraySize;
 }
 
+void MusicLibrary::display()
+{
+    std::cout << "Треки в библиотеке: " << std::endl;
+    printAudioFileArray();
+    std::cout << "Плейлисты в библиотеке: " << std::endl;
+    printPlaylistArray();
+}
+
 std::vector<AudioFile> MusicLibrary::getAudioFileArray()
 {
     return audioFileArray;
