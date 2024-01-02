@@ -1,7 +1,7 @@
 #include "Album.h"
 
 Album::Album(const std::string& artistName, const std::string& albumName, std::vector<AudioFile> trackList)
-	: TrackList{ list }, artistName{artistName}, albumName{albumName}
+	: TrackList{ trackList }, artistName{artistName}, albumName{albumName}
 {
 }
 
