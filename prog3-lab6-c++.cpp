@@ -5,9 +5,11 @@
 #include "AudioFile.h"
 #include "TrackList.h"
 #include "Playlist.h"
+#include "Album.h"
 #include "AudioPlayer.h"
 #include "AudioCollection.h"
 #include "MusicLibrary.h"
+#include "DisplayParent.h"
 
 using namespace std;
 
@@ -17,10 +19,14 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    Playlist playlist("Мой плейлист");
     AudioFile audioFile("file1.mp3", "FRIENDLY THUG 52 NGG", "No Gletcher Gang", 203, 2023); 
-    playlist.add(audioFile);
-
-    TrackList* trackList = &playlist;
-    trackList->display();
+    std::vector<AudioFile> trackList{audioFile};
+    
+    Album album("FRIENDLY THUG 52 NGG", "Cristoforo Colombo", trackList);
+    MusicLibrary musicLibrary(trackList);
+    
+    DisplayParent<Album> albumDisplayParent;
+    albumDisplayParent.display(album);
+    DisplayParent<MusicLibrary> musicLibraryDisplayParent;
+    musicLibraryDisplayParent.display(musicLibrary);
 }
