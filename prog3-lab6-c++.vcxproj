@@ -132,6 +132,7 @@
     <ClCompile Include="AudioFile.cpp" />
     <ClCompile Include="AudioPlayer.cpp" />
     <ClCompile Include="AuditionsNumber.cpp" />
+    <ClCompile Include="DisplayItem.cpp" />
     <ClCompile Include="MusicLibrary.cpp" />
     <ClCompile Include="Playlist.cpp" />
     <ClCompile Include="prog3-lab6-c++.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="AudioFile.h" />
     <ClInclude Include="AudioPlayer.h" />
     <ClInclude Include="AuditionsNumber.h" />
+    <ClInclude Include="DisplayItem.h" />
     <ClInclude Include="MusicLibrary.h" />
     <ClInclude Include="Playlist.h" />
     <ClInclude Include="TrackList.h" />
